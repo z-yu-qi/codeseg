@@ -1,0 +1,11 @@
+conda create -n pytorch python=3.7
+
+conda activate pytorch
+
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+conda env list
+
+Downloading https://ultralytics.com/assets/Arial.ttf to 'C:\Users\ad\AppData\Roaming\Ultralytics\Arial.ttf'...
+如果出现这个提示，说明在自动下载配置文件，偶尔会出现下载超时，建议像我刚才一样手动复制code文件夹内的Arial.ttf到C:\Users\ad\AppData\Roaming\Ultralytics\Arial.ttf路径即可，没有这个
+文件名的话可以自己创建。
