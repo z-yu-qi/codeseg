@@ -1,0 +1,50 @@
+# 模型配置
+model:
+  path: "runs/detect/train/weights/best.pt"
+  conf_thresh: 0.25
+  iou_thresh: 0.45
+  input_size: 640
+
+# 数据路径配置
+paths:
+  image_dir: "test_images"
+  output_dir: "detection_results"
+  log_file: "fault_detection.log"
+
+# 图像处理配置
+image:
+  max_size: 1920  # 最大图像尺寸
+  supported_formats: [".jpg", ".jpeg", ".png", ".bmp"]
+
+# 故障等级配置
+severity_levels:
+  严重:
+    color: [0, 0, 255]    # BGR格式，红色
+    priority: 1
+  中等:
+    color: [0, 165, 255]  # BGR格式，橙色
+    priority: 2
+  轻微:
+    color: [0, 255, 0]    # BGR格式，绿色
+    priority: 3
+
+# 故障类型配置
+fault_types:
+  broken_wire:
+    name: "断线故障"
+    severity: "严重"
+  insulator_damage:
+    name: "绝缘子损坏"
+    severity: "严重"
+  corrosion:
+    name: "金具腐蚀"
+    severity: "中等"
+  wire_wear:
+    name: "导线磨损"
+    severity: "中等"
+  foreign_object:
+    name: "异物附着"
+    severity: "轻微"
+  vegetation:
+    name: "植被干扰"
+    severity: "轻微" 
