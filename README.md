@@ -1,4 +1,5 @@
 # 基于深度学习的电力线路故障识别系统
+数据集开源地址：https://github.com/InsulatorData/InsulatorDataSet
 
 ## 项目简介
 本系统基于YOLOv8目标检测框架，实现了电力线路故障的自动识别和分类功能。系统可以识别多种类型的故障，包括断线、绝缘子损坏、金具腐蚀等，并按照故障严重程度进行分类。
@@ -28,20 +29,6 @@ venv\Scripts\activate     # Windows
 ```bash
 pip install -r requirements.txt
 ```
-
-## 使用方法
-1. 准备数据：
-   - 将待检测图像放入 `test_images` 目录
-
-2. 运行检测：
-```bash
-python predict.py
-```
-
-3. 查看结果：
-   - 检测结果保存在 `detection_results` 目录
-   - 每个图像生成带标注的图片和JSON格式的详细报告
-   - 运行日志保存在 `fault_detection.log`
 
 ## 配置说明
 系统参数可在 `config.yaml` 中修改，包括：
